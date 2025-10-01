@@ -1,0 +1,7 @@
+# Watchdog configuration template
+
+watchdog-device = ${WATCHDOG_DEVICE}
+interval = ${WATCHDOG_INTERVAL}
+realtime = yes
+priority = 1
+timeout = ${WATCHDOG_TIMEOUT}
