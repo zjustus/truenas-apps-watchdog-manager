@@ -2,9 +2,9 @@
 set -e
 
 # Default environment variables
-WATCHDOG_DEVICE=${WATCHDOG_DEVICE:-/dev/watchdog0}
-WATCHDOG_INTERVAL=${WATCHDOG_INTERVAL:-30}   # seconds
-WATCHDOG_TIMEOUT=${WATCHDOG_TIMEOUT:-120}    # seconds
+export WATCHDOG_DEVICE=${WATCHDOG_DEVICE:-/dev/watchdog0}
+export WATCHDOG_INTERVAL=${WATCHDOG_INTERVAL:-30}   # seconds
+export WATCHDOG_TIMEOUT=${WATCHDOG_TIMEOUT:-120}    # seconds
 
 # Substitute environment variables into template
 envsubst < /watchdog.conf.template > /etc/watchdog.conf
