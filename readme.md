@@ -9,12 +9,11 @@ you might be able to do this through scrips, or other simpler means, but this me
 
 ```yaml
 services:
-	watchdog:
-		build:
-			context: https://github.com/zjustus/truenas-apps-network-manager.git
-		devices:
-			- "/dev/watchdog0:/dev/watchdog0"
-		restart: unless-stopped
-		privileged: true # Needed to access the hardware watchdog
-
+    watchdog:
+        build:
+            context: https://github.com/zjustus/truenas-apps-watchdog-manager.git
+        devices:
+            - "/dev/watchdog0:/dev/watchdog0"
+        restart: unless-stopped
+        privileged: true # Needed to access the hardware watchdog
 ```
